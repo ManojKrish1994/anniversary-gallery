@@ -1,0 +1,32 @@
+<h1 class="anniversary-title">Happy 6-Month Anniversary! 🎉</h1>
+<div class="gallery">
+    <div class="photo-wrapper">
+      <img
+        *ngIf="photos.length > 0"
+        [@slideAnimation]
+        [src]="photos[currentIndex]?.src"
+        [alt]="photos[currentIndex]?.title"
+        class="photo"
+      />
+      <h2>{{ photos[currentIndex]?.title }}</h2>
+      <p class="quote">"{{ photos[currentIndex]?.quote }}"</p>
+    </div>
+    <div class="button-container">
+        <button 
+          class="nav-button" 
+          (click)="prevPhoto()" 
+          [disabled]="currentIndex === 0"
+        >
+          Previous
+        </button>
+      
+        <button 
+          class="nav-button" 
+          (click)="nextPhoto()" 
+          [disabled]="currentIndex === photos.length - 1"
+        >
+          Next
+        </button>
+      </div>
+  </div>
+  

@@ -1,0 +1,136 @@
+/* Background with a soft gradient */
+
+/* Ensure there's no conflicting global styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+body {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Anniversary title styling */
+  .anniversary-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    animation: heartbeat 1.5s infinite;
+  }
+  
+  /* Heartbeat animation for the title */
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Photo container */
+  .photo-wrapper {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Images */
+  .photo {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 15px;
+    border: 5px solid #fff;
+  }
+  
+  /* Photo title */
+  h2 {
+    font-size: 2rem;
+    margin: 15px 0 10px;
+    color: #ffe4e1;
+  }
+  
+  /* Quotes under images */
+  .quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #fff5f8;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Buttons container */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 350px;
+    margin: 20px auto;
+  }
+  
+  /* Navigation buttons */
+  .nav-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff758c;
+    background-color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #ff8fab;
+    color: #fff;
+    transform: scale(1.1);
+  }
+  
+  .nav-button:disabled {
+    background-color: #ffe4e1;
+    color: #999;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .anniversary-title {
+      font-size: 2.5rem;
+    }
+  
+    .photo {
+      max-width: 90%;
+    }
+  
+    .button-container {
+      flex-direction: column;
+    }
+  
+    .nav-button {
+      width: 100%;
+    }
+  }
+  
